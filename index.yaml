@@ -3,6 +3,20 @@ entries:
   ng-auth-ui:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-09-01T12:40:38.417518526Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 8cd2de919f853de10e63748fd40bc74b031d2375d2e15fc21e62a45af6d64286
+    name: ng-auth-ui
+    type: application
+    urls:
+    - https://github.com/harness/helm-ng-auth-ui/releases/download/ng-auth-ui-0.2.1/ng-auth-ui-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-08-22T23:28:09.968556101Z"
     dependencies:
     - name: common
@@ -18,4 +32,4 @@ entries:
     urls:
     - https://github.com/harness/helm-ng-auth-ui/releases/download/ng-auth-ui-0.2.0/ng-auth-ui-0.2.0.tgz
     version: 0.2.0
-generated: "2022-08-22T23:28:09.968871506Z"
+generated: "2022-09-01T12:40:38.417525826Z"
