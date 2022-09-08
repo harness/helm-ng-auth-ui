@@ -41,24 +41,7 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         securityContext:
           {{- toYaml .Values.securityContext | nindent 12 }}
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: {{.Values.service.targetport}}
-          periodSeconds: 10
-          failureThreshold: 5
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: {{.Values.service.targetport}}
-          periodSeconds: 10
-          failureThreshold: 5
-        startupProbe:
-          httpGet:
-            path: /health
-            port: {{.Values.service.targetport}}
-          periodSeconds: 10
-          failureThreshold: 25
+        {{- toYaml .Values.probes | nindent 8}}
         ports:
         - name: ng-auth-ui-port
           containerPort: {{.Values.service.targetport}}
